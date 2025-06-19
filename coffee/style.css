@@ -56,7 +56,7 @@ body {
     background: linear-gradient(to right, #e1e1e1, #6e6e6e);
     border-radius: 0 0 125px 125px;
 }
-.container .cup .top {
+.container .top {
     position: absolute;
     top: -30px;
     left: 0;
@@ -65,7 +65,7 @@ body {
     background: linear-gradient(to right, #e1e1e1, #6e6e6e);
     border-radius: 50%;
 }
-.container .cup .top .circle {
+.container .circle {
     position: absolute;
     top: 5px;
     left: 10px;
@@ -76,16 +76,48 @@ body {
     box-sizing: border-box;
     overflow: hidden;
 }
-.container .cup .top .circle .coffee {
+.container .coffee {
     position: absolute;
     top: 20px;
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(#473f3f, #b7c3c1);
+    background: radial-gradient( #b7c3c1,#473f3f);
     border-radius: 50%;
 }
-.container .cup .handle {
+
+.container .foam {
+    border-radius: 100%;
+    height: 450px;
+    position: absolute;
+    width: 200px;
+}
+
+.container .foam:after {
+    background: linear-gradient(to right, #bde498, #f88959);
+    border-radius: 50%;
+    content: "";
+    height: 180px;
+    left: 10px;
+    position: absolute;
+    width: 180px;
+}
+
+.container .x1 {
+    animation:
+            animateFoam 2s linear infinite,
+            sideWays 3s ease-in-out infinite alternate;
+    left: 5%;
+    top: 10%;
+    transform: scale(0.1);
+}
+
+.container .x2 {}
+.container .x3 {}
+.container .x4 {}
+.container .x5 {}
+
+.container .handle {
     position: absolute;
     top: 40px;
     right: -70px;
@@ -98,14 +130,14 @@ body {
     transform: rotate(42deg)
 }
 
-.container .cup .top .vapour  {
+.container .vapour  {
     position: relative;
     display: flex;
     z-index: 1;
     padding: 0 10px;
 }
 
-.container .cup .top .vapour span {
+.container .vapour span {
     position: relative;
     bottom: 90px;
     display: block;
@@ -114,13 +146,13 @@ body {
     height: 120px;
     border-radius: 50%;
     background: #fff;
-    animation: animate 5s linear infinite;
+    animation: animateVapour 5s linear infinite;
     opacity: 0;
     filter: blur(15px);
     animation-delay: calc(var(--i) * -0.5s);
 }
 
-@keyframes animate {
+@keyframes animateVapour {
     0% {
         transform: translateY(0) scaleX(1);
         opacity: 0;
@@ -139,5 +171,13 @@ body {
     }
     100% {
         transform: translateY(-300px) scaleX(8);
+    }
+}
+@keyframes animateFoam {
+    0% {
+        margin-top: 10px;
+    }
+    100% {
+        margin-top: 900%;
     }
 }

@@ -88,7 +88,7 @@ body {
     opacity: 0.5;
 }
 
-.charging-frame .wave .wave-two {
+.charging-frame .wave-two {
     animation: 5000ms linear infinite backwards drift;
     opacity: 0.2;
 }
@@ -102,7 +102,7 @@ body {
     left: 85%;
     top: 10%;
 }
-.charging-frame .wrapper .charger .box .shade .dot1 {
+.charging-frame .dot1 {
     width: 3px;
     height: 3px;
     background: #abe1ff;
@@ -111,7 +111,7 @@ body {
     top: 11%;
     position: absolute;
 }
-.charging-frame .wrapper .charger .box .shade .dot2 {
+.charging-frame .dot2 {
     width: 3px;
     height: 3px;
     background: #abe1ff;
@@ -120,7 +120,7 @@ body {
     top: 35%;
     position: absolute;
 }
-.charging-frame .wrapper .charger .box .shade .dot3 {
+.charging-frame .dot3 {
     width: 3px;
     height: 3px;
     background: #abe1ff;
@@ -130,7 +130,7 @@ body {
     position: absolute;
     animation: animateDot 4s linear infinite;
 }
-.charging-frame .wrapper .charger .box .shade .dot4 {
+.charging-frame .dot4 {
     width: 3px;
     height: 3px;
     background: #abe1ff;
@@ -214,7 +214,7 @@ body {
 }
 .charging-frame .x10 {
     animation:
-        animateBubble 16s linear infinite,
+        animateBubble 12s linear infinite,
         sideWays 4s ease-in-out infinite alternate;
     left: 5%;
     top: 8%;
@@ -222,7 +222,7 @@ body {
 }
 .charging-frame .bubble {
     border-radius: 100%;
-    height: 400px;
+    height: 450px;
     position: absolute;
     width: 200px;
 }
@@ -250,7 +250,7 @@ body {
         margin-top: 10px;
     }
     100% {
-        margin-top: 900%;
+       margin-top: 700%;
     }
 }
 @keyframes sideWays {
