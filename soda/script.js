@@ -24,9 +24,12 @@ function respawnFoam(foam) {
     foam.style.left = `${left}%`;
     foam.style.top = `${top}%`;
 
-    const duration = Math.random() * 20 + 2;
+    const duration = Math.random() * 20+1;
+    const delay = Math.random() * 20+15;
     const randomIndex = Math.floor(Math.random() * Move.length);
     const animationName = Move[randomIndex];
+
+    foam.style.animation = animationName;
     foam.style.animation = `${animationName} ${duration}s linear infinite`;
 
 }
