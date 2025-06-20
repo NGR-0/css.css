@@ -29,7 +29,7 @@ function respawnFoam(foam) {
     const randomIndex = Math.floor(Math.random() * Move.length);
     const animationName = Move[randomIndex];
 
-    foam.style.animation = animationName;
+    foam.style.animationDelay = `${delay}s`;
     foam.style.animation = `${animationName} ${duration}s linear infinite`;
 
 }
