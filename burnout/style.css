@@ -16,7 +16,7 @@ body{
     width: 400px;
     height: 400px;
     transform-origin: center;
-    animation: spin 2s ease-in infinite;
+    animation: spin 20s linear forwards infinite;
 }
 
 .tire {
@@ -31,7 +31,7 @@ body{
 
 .brand-svg {
     position: absolute;
-    top: -10%;
+    top: -8%;
     left: 0;
     width: 400px;
     height: 400px;
@@ -47,7 +47,7 @@ body{
 
 .logo {
     position: absolute;
-    bottom: 6%;
+    bottom: 7%;
     left: 34%;
     width: 150px;
     height: 150px;
@@ -93,6 +93,35 @@ body{
     border-radius: 50%;
 }
 
+.spoke{
+    position: absolute;
+    width: 30px;
+    height: 220px;
+    top: 50%;
+    left: 50%;
+    background: radial-gradient(
+            circle,
+            transparent 20%,
+            #2b2b2c 20%
+    );
+    border-radius:0 100% 0 100% / 0 100% 0 100%;
+    z-index: 1;
+    box-shadow: inset 0 0 10px #ffffff;
+}
+
+.x1 {
+    transform: translate(-50%, -50%) rotate(0deg);
+}
+.x2 {
+    transform: translate(-50%, -50%) rotate(45deg);
+}
+.x3 {
+    transform: translate(-50%, -50%) rotate(90deg);
+}
+.x4 {
+    transform: translate(-50%, -50%) rotate(135deg);
+}
+
 .rim::before{
     content: '';
     position: absolute;
@@ -118,17 +147,18 @@ body{
     );
     clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
 }
+
 .tire-shadow {
     position: absolute;
-    left: 42%;
+    left: 40%;
     bottom: 25%;
     width: 300px;
     height: 50px;
     border-radius: 50%;
     background: black;
-    box-shadow: 0 10px 100px rgb(0, 0, 0);
-    filter: blur(30px);
-    z-index: 0;
+    box-shadow: 0 0 100px rgb(0, 0, 0);
+    filter: blur(15px);
+    z-index: -1;
 }
 
 .smoke  {
@@ -143,7 +173,7 @@ body{
 }
 .smoke span {
     position: relative;
-    bottom: 50px;
+    bottom: 80px;
     display: block;
     margin: 0;
     min-width: 5px;
@@ -152,14 +182,41 @@ body{
     background: #fff;
     opacity: 0;
     filter: blur(10px);
-    /*animation: smk1 3s linear infinite;*/
-    /*animation-delay: calc(var(--i) * -0.7s);*/
-
 }
 
 @keyframes spin {
-    to{
+    3% {
+        transform: rotate(0deg);
+    }
+    10% {
         transform: rotate(-1080deg);
+    }
+    20%{
+        transform: rotate(-3600deg);
+    }
+    30% {
+        transform: rotate(-7200deg);
+    }
+    40% {
+        transform: rotate(-14400deg);
+    }
+    50% {
+        transform: rotate(-28800deg);
+    }
+    60% {
+        transform: rotate(-57600deg);
+    }
+    70% {
+        transform: rotate(-115200deg);
+    }
+    80% {
+        transform: rotate(-129600deg);
+    }
+    90% {
+        transform: rotate(-130680deg);
+    }
+    100% {
+        transform: rotate(-130680deg);
     }
 }
 
