@@ -1,4 +1,5 @@
 const smokeContainer = document.querySelector('.smoke');
+
 const animateSmoke = [
     'smk1', 'smk2', 'smk3', 'smk4', 'smk5',
     'smk6', 'smk7', 'smk8', 'smk9', 'smk10',
@@ -15,6 +16,8 @@ function createSmoke(props) {
     const duration = Math.random() * 3 + 1;
     const delay = props * -1.5;
 
+    console.log(props)
+
     smoke.style.setProperty('--i', props);
     smoke.style.animationDelay = `${delay}s`;
     smoke.style.animation = `${animationName} ${duration}s linear forwards infinite`;
@@ -22,8 +25,9 @@ function createSmoke(props) {
     smokeContainer.appendChild(smoke);
 
     if (smokeContainer.children.length > 61) {
-        smokeContainer.removeChild(smokeContainer.firstChild);
+        smokeContainer.removeChild(smoke);
     }
+
 }
 
 function startSmoke(rate) {
@@ -35,7 +39,8 @@ function startSmoke(rate) {
 function stopSmoke(rate) {
     clearInterval(smokeInterval);
     smokeInterval = setInterval(() => {
-        smokeContainer.removeChild(smokeContainer.firstChild);
+        smokeContainer.firstElementChild.remove();
+        // smokeContainer.removeChild()
     }, rate);
 }
 
@@ -47,9 +52,10 @@ function SmokeCycle() {
 
     setTimeout(() => {
         stopSmoke(50);
-    }, 15000);
+    }, 8000);
 
-    setTimeout(SmokeCycle, 20000);
+    setTimeout(SmokeCycle, 10000);
+
 }
 
 SmokeCycle()

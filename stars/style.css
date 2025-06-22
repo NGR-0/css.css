@@ -20,14 +20,14 @@ body {
     background: radial-gradient(#3c3c4c, #121220);
     overflow: hidden;
 }
+
 .star {
     position: absolute;
     background: white;
     border-radius: 50%;
     opacity: 0.1;
-    box-shadow: 0 0 100px white;
+    box-shadow: 0 0 30px white;
 }
-
 
 .waves {
     position: absolute;

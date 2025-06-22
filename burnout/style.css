@@ -16,7 +16,8 @@ body{
     width: 400px;
     height: 400px;
     transform-origin: center;
-    animation: spin 20s linear forwards infinite;
+    animation: spin 10s linear forwards infinite;
+    animation-delay: 1s;
 }
 
 .tire {
@@ -150,7 +151,7 @@ body{
 
 .tire-shadow {
     position: absolute;
-    left: 40%;
+    left: 42%;
     bottom: 25%;
     width: 300px;
     height: 50px;
@@ -189,34 +190,34 @@ body{
         transform: rotate(0deg);
     }
     10% {
-        transform: rotate(-1080deg);
+        transform: rotate(-360deg);
     }
     20%{
-        transform: rotate(-3600deg);
+        transform: rotate(-720deg);
     }
     30% {
-        transform: rotate(-7200deg);
+        transform: rotate(-1440deg);
     }
     40% {
-        transform: rotate(-14400deg);
+        transform: rotate(-2880deg);
     }
     50% {
-        transform: rotate(-28800deg);
+        transform: rotate(-5760deg);
     }
     60% {
-        transform: rotate(-57600deg);
+        transform: rotate(-11520deg);
     }
     70% {
-        transform: rotate(-115200deg);
+        transform: rotate(-23040deg);
     }
     80% {
-        transform: rotate(-129600deg);
+        transform: rotate(-28800deg);
     }
     90% {
-        transform: rotate(-130680deg);
+        transform: rotate(-30240deg);
     }
     100% {
-        transform: rotate(-130680deg);
+        transform: rotate(-30600deg);
     }
 }
 
