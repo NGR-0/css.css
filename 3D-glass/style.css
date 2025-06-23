@@ -35,7 +35,6 @@ body {
     transform-style: preserve-3d;
     transition: 2.5s;
 }
-
 .loader i::before {
     content: '';
     position: absolute;
@@ -52,7 +51,6 @@ body {
     backdrop-filter: blur(12px);
     transform: translateZ(90px);
 }
-
 .loader:hover i,
 .loader:hover span {
     transform: rotateX(360deg);
