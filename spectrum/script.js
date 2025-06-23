@@ -1,7 +1,6 @@
 const spectrumContainer = document.querySelector('.visualizer');
 const spectrumBars = [];
 
-
 function getGradientByIndex(i, total) {
     const hue = Math.floor((i / total) * 360);
     const color1 = `hsl(${hue}, 100%, 60%)`;
@@ -11,8 +10,6 @@ function getGradientByIndex(i, total) {
         baseColor: color1
     };
 }
-
-
 
 function createSpectrum(i) {
     const spectrum = document.createElement('div');
@@ -40,7 +37,6 @@ function createSpectrum(i) {
                 const factor = 1 - distance * 0.1;
                 const baseHeight = 200;
                 const height = baseHeight * factor + 200;
-
 
                 spectrumBars[index].style.height = `${height}px`;
             }
