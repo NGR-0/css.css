@@ -56,12 +56,9 @@ body{
 .navigation ul li a:hover .icon {
     transform: scale(1.2) ;
 }
-
-
 .navigation ul li.active a .icon{
     transform: translateY(-33px) ;
 }
-
 .navigation ul li a .text{
     position: absolute;
     color: var(--clr);
