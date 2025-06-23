@@ -185,10 +185,99 @@ body{
 .container.active .toggle-left{
     transform: translateX(0);
 }
+
 .toggle-right{
     right: 0;
     transform: translateX(0);
 }
 .container.active .toggle-right{
-    transform: translateX(200%);
+    transform: translateX(100%);
 }
+
+.container.is-submitting .toggle-container {
+    width: 100%;
+    left: 0;
+    transform: translateX(0);
+    border-radius: 10px;
+    z-index: 1001;
+}
+
+.container.is-submitting .toggle-panel p,
+.container.is-submitting .toggle-panel button {
+    opacity: 0;
+    transition: opacity 0.2s ease-in-out;
+    pointer-events: none;
+}
+
+.container.is-submitting .toggle-panel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container.is-submitting .toggle-panel h1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.container.is-submitting .fa-circle-check {
+    font-size: 4em;
+}
+/*.submitting-container {*/
+/*    position: absolute;*/
+/*    inset: 0;*/
+/*    z-index: 0;*/
+/*    opacity: 0;*/
+/*    pointer-events: none;*/
+/*    transition: opacity 0.4s ease-in-out;*/
+/*}*/
+
+/*.submitting-panel {*/
+/*    position: absolute;*/
+/*    width: 50%;*/
+/*    height: 100%;*/
+/*    background: linear-gradient(#67ffbb, #046138);*/
+/*    transition: transform 0.8s cubic-bezier(0.86, 0, 0.07, 1);*/
+/*}*/
+
+/*.left-panel {*/
+/*    left: 0;*/
+/*    border-top-right-radius: 150px;*/
+/*    border-bottom-right-radius: 150px;*/
+/*    transform: translateX(-100%);*/
+/*}*/
+
+/*.right-panel {*/
+/*    right: 0;*/
+/*    border-top-left-radius: 150px;*/
+/*    border-bottom-left-radius: 150px;*/
+/*    transform: translateX(100%);*/
+/*}*/
+
+/*.submitting-text {*/
+/*    position: absolute;*/
+/*    top: 50%;*/
+/*    left: 50%;*/
+/*    transform: translate(-50%, -50%) scale(0.8);*/
+/*    color: #333;*/
+/*    font-size: 2.5em;*/
+/*    opacity: 0;*/
+/*    transition: opacity 0.5s ease 0.6s, transform 0.5s ease 0.6s;*/
+/*}*/
+
+/*.container.submitting .submitting-container {*/
+/*    opacity: 1;*/
+/*    z-index: 2000;*/
+/*    pointer-events: auto;*/
+/*}*/
+
+/*.container.submitting .left-panel,*/
+/*.container.submitting .right-panel {*/
+/*    transform: translateX(0);*/
+/*}*/
+
+/*.container.submitting .submitting-text {*/
+/*    opacity: 1;*/
+/*    transform: translate(-50%, -50%) scale(1);*/
+/*}*/

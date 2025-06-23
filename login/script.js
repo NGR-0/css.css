@@ -9,3 +9,70 @@ registerBtn.addEventListener('click', () => {
 loginBtn.addEventListener('click', () => {
     container.classList.remove('active');
 });
+
+
+// const signInBtn = document.querySelector('.sign-in button');
+// const signUpBtn = document.querySelector('.sign-up button');
+// const submittingText = document.querySelector('.submitting-text');
+//
+// const triggerSubmitAnimation = (event, message) => {
+//     event.preventDefault();
+//
+//     submittingText.textContent = message;
+//
+//     container.classList.add('submitting');
+//
+//     setTimeout(() => {
+//         container.classList.remove('submitting');
+//     }, 4000);
+// };
+//
+// signInBtn.addEventListener('click', (event) => {
+//     triggerSubmitAnimation(event, 'Welcome');
+// });
+//
+// signUpBtn.addEventListener('click', (event) => {
+//     triggerSubmitAnimation(event, 'Hello');
+// });
+
+
+const signInSubmitBtn = document.querySelector('.form-container.sign-in button');
+const signUpSubmitBtn = document.querySelector('.form-container.sign-up button');
+
+const toggleLeftH1 = document.querySelector('.toggle-left h1');
+const toggleRightH1 = document.querySelector('.toggle-right h1');
+
+const originalLeftText = toggleLeftH1.textContent;
+const originalRightText = toggleRightH1.textContent;
+
+const resetSubmitAnimation = () => {
+    container.classList.remove('is-submitting');
+    setTimeout(() => {
+        toggleLeftH1.textContent = originalLeftText;
+        toggleRightH1.textContent = originalRightText;
+    }, 600);
+};
+
+const triggerSubmitAnimation = (event, message) => {
+    event.preventDefault();
+
+    if (container.classList.contains('active')) {
+        toggleLeftH1.innerHTML = message;
+    } else {
+        toggleRightH1.innerHTML = message;
+    }
+
+    container.classList.add('is-submitting');
+
+    setTimeout(resetSubmitAnimation, 4000);
+};
+
+const checkmarkIcon = '<i class="fa-solid fa-circle-check"></i>';
+
+signInSubmitBtn.addEventListener('click', (event) => {
+    triggerSubmitAnimation(event, checkmarkIcon);
+});
+
+signUpSubmitBtn.addEventListener('click', (event) => {
+    triggerSubmitAnimation(event, checkmarkIcon);
+});
