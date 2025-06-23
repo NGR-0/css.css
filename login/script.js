@@ -10,32 +10,6 @@ loginBtn.addEventListener('click', () => {
     container.classList.remove('active');
 });
 
-
-// const signInBtn = document.querySelector('.sign-in button');
-// const signUpBtn = document.querySelector('.sign-up button');
-// const submittingText = document.querySelector('.submitting-text');
-//
-// const triggerSubmitAnimation = (event, message) => {
-//     event.preventDefault();
-//
-//     submittingText.textContent = message;
-//
-//     container.classList.add('submitting');
-//
-//     setTimeout(() => {
-//         container.classList.remove('submitting');
-//     }, 4000);
-// };
-//
-// signInBtn.addEventListener('click', (event) => {
-//     triggerSubmitAnimation(event, 'Welcome');
-// });
-//
-// signUpBtn.addEventListener('click', (event) => {
-//     triggerSubmitAnimation(event, 'Hello');
-// });
-
-
 const signInSubmitBtn = document.querySelector('.form-container.sign-in button');
 const signUpSubmitBtn = document.querySelector('.form-container.sign-up button');
 
