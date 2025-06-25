@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Pacifico&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-size: cover;
+    background: linear-gradient(to right, #cccccc, #61cf62);
+}
+.container{
+    position: absolute;
+    width: 80%;
+    height: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url("mej.jpg") no-repeat center;
+}
+
+.paper {
+    position: relative;
+    width: 20%;
+    height: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.4s ease-in;
+    box-shadow: 0 0 10px 10px rgba(0, 0, 0, 0.3);
+}
+
+.paper::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle 100px at var(--x, -100px) var(--y, -100px),
+    rgba(0,0,0,0) 0%,
+    rgba(0,0,0,0.8) 60%,
+    rgba(0,0,0,0.95) 100%);
+}
+
+.container .paper:hover {
+    transform: scale(1.2);
+    box-shadow: 0 0 10px;
+}
+.paper.active-spotlight::before {
+    opacity: 1;
+}
+.content
+{
+    padding: 25px;
+    text-align: center;
+    color: #333;
+    max-width: 90%;
+}
+.content h2 {
+    position: relative;
+    font-family: 'Pacifico', cursive;
+    font-size: 4em;
+    font-weight: 700;
+    color: #005c4b;
+    margin: 0 0 30px 0;
+    padding: 15px;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+}
+.content h2::after {
+    position: absolute;
+    content: '';
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 2px;
+    background: #009576;
+}
+
+.content p {
+    font-family: 'Lato', sans-serif;
+    font-size: 15px;
+    line-height: 1.8;
+    color: #444;
+}
